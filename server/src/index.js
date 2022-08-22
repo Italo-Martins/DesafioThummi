@@ -44,9 +44,6 @@ app.get('/product', (request, response) => {
         return response.json(results)
     }
 
-    // const results = bets
-    //     ? products.filter(product => product.id === id)
-    //     : products;
 
     return response.json(products);
 

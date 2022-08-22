@@ -12,12 +12,12 @@ services:
       - ./server:/usr/app
   frontend:
     build:
-          context: ./store
+          context: ./client/store
           dockerfile: Dockerfile
     command: yarn start
     ports:
       - "3000:3000"
     volumes:
-      - ./client:/usr/app
+      - ./client:/home/app
     links:
       - "backend"
