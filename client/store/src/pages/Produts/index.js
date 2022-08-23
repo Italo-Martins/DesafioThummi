@@ -34,15 +34,6 @@ const Produts = () => {
         <Container>
             <Table Product={currentProduct}></Table>
             <DivButton>
-            {/* {Array.from(Array(pages), (item, index) => {
-            return(
-                <button
-                value={index} 
-                key={index} 
-                onClick={(e) => {setcurrentPages(Number(e.target.value))}}
-                >{index}</button>
-            )
-        })} */}
                 <PageButton Page={pages} Set={setcurrentPages} CurrentPage={currentPages}/>
             </DivButton>
         </Container>
