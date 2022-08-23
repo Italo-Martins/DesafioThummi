@@ -2,22 +2,18 @@ version: '3'
 
 services:
   backend:
-    build: 
-          context: ./server
-          dockerfile: Dockerfile
+    build: ./server
     command: yarn dev
     ports:
       - "3333:3333"
     volumes:
-      - ./server:/usr/app
+      - ./server:/back/app
   frontend:
-    build:
-          context: ./client/store
-          dockerfile: Dockerfile
+    build: ./client/store
     command: yarn start
     ports:
       - "3000:3000"
     volumes:
-      - ./client:/home/app
+      - ./client:/front/app
     links:
       - "backend"

@@ -1,11 +1,11 @@
 FROM node:16.13.2
 
-WORKDIR /usr/app
+WORKDIR /app
 
-COPY packege*.json yarn.lock ./
+COPY ./package.json ./
 RUN yarn
 
 COPY . .
 
 EXPOSE 3333
-CMD ["yarn", "dev"]
+CMD ["yarn", "start"]
